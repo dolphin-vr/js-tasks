@@ -10,7 +10,7 @@
 const login = "Адмін";
 const passwd = "Я головний";
 const userLogin = prompt ("Enter login");
-if (userLogin === "" || userLogin == null){
+if (!userLogin){
    console.log("Відмінено");
 } else if (userLogin === login){
    const userPaswd = prompt("Enter password");
