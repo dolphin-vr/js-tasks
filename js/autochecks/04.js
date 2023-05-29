@@ -379,15 +379,1017 @@ function makePizza(pizzaName, callback) {
 // Виклик changeEven([44, 13, 81, 92, 36, 54], 100) повертає новий масив [144, 13, 81, 192, 136, 154]
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
 
-function changeEven(numbers, value) {
-   // Change code below this line
-   for (let i = 0; i < numbers.length; i += 1) {
-     if (numbers[i] % 2 === 0) {
-       numbers[i] = numbers[i] + value;
-     }
-   }
-   // Change code above this line
-}
+// function changeEven(numbers, value) {
+//    // Change code below this line
+//     const arr = [];
+//     numbers.forEach(el => {
+//       if (el % 2 === 0){
+//         arr.push(el + value);
+//       } else{
+//         arr.push(el);
+//       }
+//     });
+//     return arr;
+//    // Change code above this line
+// }
+
+// console.log(changeEven([1, 2, 3, 4, 5], 10));
 
 
- 
+// ===========================================  14
+// Доповни код таким чином, щоб у змінній planetsLengths вийшов масив довжин назв планет. Обов'язково використовуй метод map().
+
+// Оголошена змінна planets
+// Значення змінної planets - це масив ["Earth", "Mars", "Venus", "Jupiter"]
+// Оголошена змінна planetsLengths
+// Значення змінної planetsLengths - це масив [5, 4, 5, 7]
+// Для перебирання масиву планет використаний метод map()
+
+// const planets = ["Earth", "Mars", "Venus", "Jupiter"];
+// // Change code below this line
+// const planetsLengths = planets.map(el => el.length);
+
+// console.log(planetsLengths);
+
+
+// ==============================================  15
+// Використовуючи метод map(), зроби так, щоб у змінній titles вийшов масив назв книг (властивість title) з усіх об'єктів масиву books.
+
+// Оголошена змінна books
+// Значення змінної books - це масив
+// Оголошена змінна titles
+// Значення змінної titles - це масив ["The Last Kingdom", "Beside Still Waters", "The Dream of a Ridiculous Man", "Redder Than Blood", "Enemy of God"]
+// Для перебирання масиву books використовується метод map() як чиста функція
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+// // Change code below this line
+
+// const titles = books.map(({title}) => title);
+
+// console.log(titles);
+
+
+// ===========================================  16
+// Використовуючи метод flatMap(), зроби так, щоб у змінній genres вийшов масив усіх жанрів книг (властивість genres) з масиву книг books.
+
+// Оголошена змінна books
+// Значення змінної books - це масив об'єктів
+// Оголошена змінна genres
+// Значення змінної genres - це масив [ "adventure", "history", "fiction", "horror", "mysticism" ]
+// Для перебирання масиву books використовується метод flatMap()
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["adventure", "history"],
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     genres: ["fiction"],
+//   },
+//   {
+//     title: "Redder Than Blood",
+//     author: "Tanith Lee",
+//     genres: ["horror", "mysticism"],
+//   },
+// ];
+// // Change code below this line
+
+// const genres = books.flatMap(({genres}) => genres);
+
+// console.log(genres);
+
+
+// =========================================  17
+// Доповни функцію getUserNames(users) таким чином, щоб вона повертала масив імен користувачів (властивість name) з масиву об'єктів в параметрі users.
+
+// Оголошена змінна getUserNames
+// Змінній getUserNames присвоєна стрілочна функція з параметром (users).
+// Для перебирання параметра users використовується метод map()
+// Виклик функції із зазначеним масивом користувачів повертає масив ["Moore Hensley", "Sharlene Bush", "Ross Vazquez", "Elma Head", "Carey Barr", "Blackburn Dotson", "Sheree Anthony"]
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+const test = [
+  {
+    name: "Moore Hensley",
+    email: "moorehensley@indexia.com",
+    eyeColor: "blue",
+    friends: ["Sharron Pace"],
+    isActive: false,
+    balance: 2811,
+    skills: ["ipsum", "lorem"],
+    gender: "male",
+    age: 37,
+  },
+  {
+    name: "Sharlene Bush",
+    email: "sharlenebush@tubesys.com",
+    eyeColor: "blue",
+    friends: ["Briana Decker", "Sharron Pace"],
+    isActive: true,
+    balance: 3821,
+    skills: ["tempor", "mollit", "commodo", "veniam", "laborum"],
+    gender: "female",
+    age: 34,
+  },
+  {
+    name: "Ross Vazquez",
+    email: "rossvazquez@xinware.com",
+    eyeColor: "green",
+    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+    isActive: false,
+    balance: 3793,
+    skills: ["nulla", "anim", "proident", "ipsum", "elit"],
+    gender: "male",
+    age: 24,
+  },
+  {
+    name: "Elma Head",
+    email: "elmahead@omatom.com",
+    eyeColor: "green",
+    friends: ["Goldie Gentry", "Aisha Tran"],
+    isActive: true,
+    balance: 2278,
+    skills: ["adipisicing", "irure", "velit"],
+    gender: "female",
+    age: 21,
+  },
+  {
+    name: "Carey Barr",
+    email: "careybarr@nurali.com",
+    eyeColor: "blue",
+    friends: ["Jordan Sampson", "Eddie Strong"],
+    isActive: true,
+    balance: 3951,
+    skills: ["ex", "culpa", "nostrud"],
+    gender: "male",
+    age: 27,
+  },
+  {
+    name: "Blackburn Dotson",
+    email: "blackburndotson@furnigeer.com",
+    eyeColor: "brown",
+    friends: ["Jacklyn Lucas", "Linda Chapman"],
+    isActive: false,
+    balance: 1498,
+    skills: ["non", "amet", "ipsum"],
+    gender: "male",
+    age: 38,
+  },
+  {
+    name: "Sheree Anthony",
+    email: "shereeanthony@kog.com",
+    eyeColor: "brown",
+    friends: ["Goldie Gentry", "Briana Decker"],
+    isActive: true,
+    balance: 2764,
+    skills: ["lorem", "veniam", "culpa"],
+    gender: "female",
+    age: 39,
+  },
+];
+// Change code below this line
+const getUserNames = users => users.map(({name}) => name);
+// Change code above this line
+
+// console.log(getUserNames(test));
+
+// ==============================================  18
+// Доповни функцію getUserEmails(users) таким чином, щоб вона повертала масив поштових адрес користувачів (властивість email) з масиву об'єктів в параметрі users.
+
+// Оголошена змінна getUserNames
+// Змінній getUserNames присвоєна стрілочна функція з параметром (users)
+// Для перебирання параметра users використовується метод map()
+// Виклик функції із зазначеним масивом користувачів повертає масив ["moorehensley@indexia.com", "sharlenebush@tubesys.com", "rossvazquez@xinware.com", "elmahead@omatom.com", "careybarr@nurali.com", "blackburndotson@furnigeer.com", "shereeanthony@kog.com"]
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// Change code below this line
+const getUserEmails = users => users.map(({email}) => email);
+// Change code above this line
+
+
+// console.log(getUserEmails(test));
+
+
+// ===============================================  19
+// Доповни код таким чином, щоб у змінній evenNumbers утворився масив парних чисел з масиву numbers, а в змінній oddNumbers - масив непарних. Обов'язково використовуй метод filter().
+
+// Оголошена змінна numbers
+// Значення змінної numbers - це масив [17, 24, 82, 61, 36, 18, 47, 52, 73]
+// Оголошена змінна evenNumbers
+// Значення змінної evenNumbers - це масив [24, 82, 36, 18, 52]
+// Оголошена змінна oddNumbers
+// Значення змінної oddNumbers - це масив [17, 61, 47, 73]
+// Для перебирання масиву numbers використаний метод filter()
+
+const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
+// Change code below this line
+const evenNumbers = numbers.filter(el => !(el%2));
+const oddNumbers = numbers.filter(el => (el%2));
+
+// console.log(evenNumbers);
+// console.log(oddNumbers);
+
+
+// =====================================  20
+// Доповни код таким чином, щоб у змінній allGenres був масив всіх жанрів книг (властивість genres) з масиву books, а у змінній uniqueGenres - масив унікальних жанрів, без повторень.
+
+// Оголошена змінна books
+// Значення змінної books - це масив об'єктів
+// Оголошена змінна allGenres
+// Значення змінної allGenres - це масив ["adventure", "history", "fiction", "mysticism", "horror", "mysticism", "adventure"]
+// Оголошена змінна uniqueGenres
+// Значення змінної uniqueGenres - це масив ["adventure", "history", "fiction", "mysticism", "horror"]
+// Для обчислення значення змінної allGenders використаний метод flatMap()
+// Для обчислення значення змінної uniqueGenres використаний метод filter()
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["adventure", "history"],
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     genres: ["fiction", "mysticism"],
+//   },
+//   {
+//     title: "Redder Than Blood",
+//     author: "Tanith Lee",
+//     genres: ["horror", "mysticism", "adventure"],
+//   },
+// ];
+// // Change code below this line
+// const allGenres = books.flatMap(({genres}) => genres);
+// const uniqueGenres = allGenres.filter((el, idx, arr) => (arr.indexOf(el) === idx));
+
+// console.log(allGenres);
+// // console.log(uniqueBool);
+// console.log(uniqueGenres);
+
+
+// ================================  21
+// Використовуючи метод filter(), доповни код таким чином, щоб:
+
+// У змінній topRatedBooks утворився масив книг, рейтинг яких (властивість rating) більший за або дорівнює значенню змінної MIN_RATING.
+// У змінній booksByAuthor утворився масив книг, написаних автором з ім'ям (властивість author), яке збігається зі значенням у змінній AUTHOR.
+// Оголошена змінна books
+// Значення змінної books - це масив об'єктів
+// Оголошена змінна MIN_RATING
+// Значення змінної MIN_RATING - це число 8
+// Оголошена змінна AUTHOR
+// Значення змінної AUTHOR - це рядок "Bernard Cornwell"
+// Оголошена змінна topRatedBooks
+// Значення змінної topRatedBooks - це масив книг з рейтингом, вищим за 8
+// Оголошена змінна booksByAuthor
+// Значення змінної booksByAuthor - це масив книг, автор яких "Bernard Cornwell"
+// Для перебирання масиву books використаний метод filter()
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+
+// const MIN_RATING = 8;
+// const AUTHOR = "Bernard Cornwell";
+// // Change code below this line
+
+// const topRatedBooks = books.filter(({rating}) => rating >= MIN_RATING);
+// const booksByAuthor = books.filter(({author}) => author === AUTHOR);
+
+// console.log(topRatedBooks);
+// console.log(booksByAuthor);
+
+
+// ================================   22
+// Доповни функцію getUsersWithEyeColor(users, color) таким чином, щоб вона повертала масив користувачів, у яких колір очей (властивість eyeColor) збігається зі значенням параметра color.
+
+// Оголошена змінна getUsersWithEyeColor
+// Змінній getUsersWithEyeColor присвоєна стрілочна функція з параметрами (users, color)
+// Для перебирання параметра users використовується метод filter()
+// Якщо значення параметра color - це "blue", функція повертає масив об'єктів користувачів з іменами Moore Hensley, Sharlene Bush і Carey Barr
+// Якщо значення параметра color - це "green", функція повертає масив об'єктів користувачів з іменами Ross Vazquez і Elma Head
+// Якщо значення параметра color - це "brown", функція повертає масив об'єктів користувачів з іменами Blackburn Dotson і Sheree Anthony
+// Якщо значення параметра color - це будь-який інший рядок, функція повертає порожній масив
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+const testUser = [
+  {
+    name: "Moore Hensley",
+    email: "moorehensley@indexia.com",
+    eyeColor: "blue",
+    friends: ["Sharron Pace"],
+    isActive: false,
+    balance: 2811,
+    gender: "male",
+    age: 37
+  },
+  {
+    name: "Sharlene Bush",
+    email: "sharlenebush@tubesys.com",
+    eyeColor: "blue",
+    friends: ["Briana Decker", "Sharron Pace"],
+    isActive: true,
+    balance: 3821,
+    gender: "female",
+    age: 34
+  },
+  {
+    name: "Ross Vazquez",
+    email: "rossvazquez@xinware.com",
+    eyeColor: "green",
+    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+    isActive: false,
+    balance: 3793,
+    gender: "male",
+    age: 24
+  },
+  {
+    name: "Elma Head",
+    email: "elmahead@omatom.com",
+    eyeColor: "green",
+    friends: ["Goldie Gentry", "Aisha Tran"],
+    isActive: true,
+    balance: 2278,
+    gender: "female",
+    age: 21
+  },
+  {
+    name: "Carey Barr",
+    email: "careybarr@nurali.com",
+    eyeColor: "blue",
+    friends: ["Jordan Sampson", "Eddie Strong"],
+    isActive: true,
+    balance: 3951,
+    gender: "male",
+    age: 27
+  },
+  {
+    name: "Blackburn Dotson",
+    email: "blackburndotson@furnigeer.com",
+    eyeColor: "brown",
+    friends: ["Jacklyn Lucas", "Linda Chapman"],
+    isActive: false,
+    balance: 1498,
+    gender: "male",
+    age: 38
+  },
+  {
+    name: "Sheree Anthony",
+    email: "shereeanthony@kog.com",
+    eyeColor: "brown",
+    friends: ["Goldie Gentry", "Briana Decker"],
+    isActive: true,
+    balance: 2764,
+    gender: "female",
+    age: 39
+  }
+]
+// Change code below this line
+const getUsersWithEyeColor = (users, color) => users.filter(({eyeColor}) => eyeColor === color);
+// Change code above this line
+
+console.log(getUsersWithEyeColor(testUser, 'blue'));
+
+
+// =============================================   23
+// Доповни функцію getUsersWithAge(users, minAge, maxAge) таким чином, щоб вона повертала масив користувачів, вік яких (властивість age) потрапляє у проміжок від minAge до maxAge.
+
+// Оголошена змінна getUsersWithAge
+// Змінній getUsersWithAge присвоєна стрілочна функція з параметрами (users, minAge, maxAge)
+// Для перебирання параметра users використовується метод filter()
+// Якщо значення параметрів minAge і maxAge дорівнюють 20 і 30 відповідно, функція повертає масив об'єктів користувачів з іменами Ross Vazquez, Elma Head і Carey Barr
+// Якщо значення параметрів minAge і maxAge дорівнюють 30 і 40 відповідно, функція повертає масив об'єктів користувачів з іменами Moore Hensley, Sharlene Bush, Blackburn Dotson, Sheree Anthony
+// Якщо значення параметрів minAge і maxAge дорівнюють 80 і 100 відповідно, функція повертає порожній масив
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// Change code below this line
+const getUsersWithAge = (users, minAge, maxAge) => users.filter(({age}) => age >= minAge && age <= maxAge);
+// Change code above this line
+
+console.log(getUsersWithAge(testUser, 80, 100));
+
+
+// ==================================================  24
+// Доповни функцію getUsersWithFriend(users, friendName) таким чином, щоб вона повертала масив користувачів, у яких є один з ім'ям в параметрі friendName. Масив друзів користувача зберігається у властивості friends.
+
+// Оголошена змінна getUsersWithFriend
+// Змінній getUsersWithFriend присвоєна стрілочна функція з параметрами (users, friendName)
+// Для перебирання параметра users використовується метод filter()
+// Якщо значення параметра friendName - це рядок "Briana Decker", функція повертає масив об'єктів користувачів з іменами Sharlene Bush і Sheree Anthony
+// Якщо значення параметра friendName - це рядок "Goldie Gentry", функція повертає масив об'єктів користувачів з іменами Elma Head і Sheree Anthony
+// Якщо значення параметра friendName - це рядок "Adrian Cross", функція повертає порожній масив
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// Change code below this line
+const getUsersWithFriend = (users, friendName) => users.filter(({friends}) => friends.includes(friendName));
+// Change code above this line
+
+console.log(getUsersWithFriend(testUser, "Briana Decker"));
+
+
+// ==========================================  25
+// Доповни функцію getFriends(users) таким чином, щоб вона повертала масив друзів всіх користувачів (властивість friends). У декількох користувачів можуть бути однакові друзі, зроби так, щоб масив, що повертається, не містив повторень.
+
+// Оголошена змінна getFriends
+// Змінній getFriends присвоєна стрілочна функція з параметром (users)
+// Виклик функції із зазначеним масивом користувачів повертає масив ["Sharron Pace", "Briana Decker", "Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner", "Goldie Gentry", "Aisha Tran", "Jordan Sampson", "Eddie Strong", "Jacklyn Lucas", "Linda Chapman"]
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// Change code below this line
+const getFriends = (users) => users.flatMap(({friends}) => friends).filter((el, idx, arr) => arr.indexOf(el) === idx);
+// Change code above this line
+
+console.log(getFriends(testUser));
+
+
+// ===============================================  26
+// Доповни функцію getActiveUsers(users) таким чином, щоб вона повертала масив активних користувачів, значення властивості isActive яких - true.
+
+// Оголошена змінна getActiveUsers Змінній getActiveUsers присвоєна стрілочна функція з параметром users
+// Для перебирання параметра users використовується метод filter()
+// Виклик функції із зазначеним масивом користувачів повертає масив об'єктів користувачів з іменами Sharlene Bush, Elma Head, Carey Barr і Sheree Anthony
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// Change code below this line
+const getActiveUsers = (users) => users.filter(({isActive}) => isActive);
+// Change code above this line
+
+
+// ===========================================  27
+// Доповни функцію getInactiveUsers(users) таким чином, щоб вона повертала масив неактивних користувачів, значення властивості isActive яких - false.
+
+// Оголошена змінна getInactiveUsers.
+// Змінній getInactiveUsers присвоєна стрілочна функція з параметром users
+// Для перебирання параметра users використовується метод filter()
+// Виклик функції із зазначеним масивом користувачів повертає масив об'єктів користувачів з іменами Moore Hensley, Ross Vazquez і Blackburn Dotson
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// Change code below this line
+const getInactiveUsers = (users) => users.filter(({isActive}) => !isActive);
+// Change code above this line
+
+
+// ==========================================  28
+// Використовуючи метод find(), доповни код таким чином, щоб:
+
+// У змінній bookWithTitle утворився об'єкт книги, назва якої (властивість title) збігається зі значенням змінної BOOK_TITLE.
+// У змінній bookByAuthor утворився об'єкт книги, автор якої (властивість author) збігається зі значенням змінної AUTHOR.
+// Оголошена змінна books
+// Значення змінної books - це масив
+// Оголошена змінна BOOK_TITLE
+// Значення змінної BOOK_TITLE - це рядок "The Dream of a Ridiculous Man"
+// Оголошена змінна AUTHOR
+// Значення змінної AUTHOR - це рядок "Robert Sheckley"
+// Оголошена змінна bookWithTitle
+// Значення змінної bookWithTitle - це об'єкт книги з назвою вище "The Dream of a Ridiculous Man"
+// Оголошена змінна bookByAuthor
+// Значення змінної bookByAuthor - це об'єкт книги автора "Robert Sheckley"
+// Для перебирання масиву books використаний метод find()
+
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     rating: 8.51,
+//   },
+//   {
+//     title: 'The Dream of a Ridiculous Man',
+//     author: 'Fyodor Dostoevsky',
+//     rating: 7.75,
+//   },
+//   { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+// ];
+// const BOOK_TITLE = 'The Dream of a Ridiculous Man';
+// const AUTHOR = 'Robert Sheckley';
+// // Change code below this line
+
+// const bookWithTitle = books.find(({title}) => title === BOOK_TITLE);
+// const bookByAuthor = books.find(({author}) => author === AUTHOR);
+
+
+// ========================================  29
+// Доповни функцію getUserWithEmail(users, email) таким чином, щоб вона повертала об'єкт користувача, пошта якого (властивість email) збігається зі значенням параметра email.
+
+// Оголошена функція getUserWithEmail(users, email)
+// Для перебирання параметра users використовується метод find()
+// Якщо значення параметра email - це "shereeanthony@kog.com", функція повертає об'єкт користувача з ім'ям Sheree Anthony
+// Якщо значення параметра email - це "elmahead@omatom.com", функція повертає об'єкт користувача з ім'ям Elma Head
+// Якщо значення параметра email - це "blackburndotson@furnigeer.com", функція повертає об'єкт користувача з ім'ям Blackburn Dotson
+// Якщо в масиві users відсутній користувач з поштою із параметра email, функція повертає undefined
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// Change code below this line
+const getUserWithEmail = (users, email) => users.find(({email: userMail}) => userMail === email);
+// Change code above this line
+
+
+// =========================================  30
+// Використовуючи метод every(), доповни код таким чином, щоб:
+
+// У змінній eachElementInFirstIsEven був результат перевірки всіх елементів масиву firstArray на парність.
+// У змінній eachElementInFirstIsOdd був результат перевірки всіх елементів масиву firstArray на непарність.
+// У змінній eachElementInSecondIsEven був результат перевірки всіх елементів масиву secondArray на парність.
+// У змінній eachElementInSecondIsOdd був результат перевірки всіх елементів масиву secondArray на непарність.
+// У змінній eachElementInThirdIsEven був результат перевірки всіх елементів масиву thirdArray на парність.
+// У змінній eachElementInThirdIsOdd був результат перевірки всіх елементів масиву thirdArray на непарність.
+// Оголошена змінна firstArray
+// Значення змінної firstArray - це масив [26, 94, 36, 18]
+// Оголошена змінна secondArray
+// Значення змінної secondArray - це масив [17, 61, 23]
+// Оголошена змінна thirdArray
+// Значення змінної thirdArray - це масив [17, 26, 94, 61, 36, 23, 18]
+// Оголошена змінна eachElementInFirstIsEven
+// Значення змінної eachElementInFirstIsEven - це буль true
+// Оголошена змінна eachElementInFirstIsOdd
+// Значення змінної eachElementInFirstIsOdd - це буль false
+// Оголошена змінна eachElementInSecondIsEven
+// Значення змінної eachElementInSecondIsEven - це буль false
+// Оголошена змінна eachElementInSecondIsOdd
+// Значення змінної eachElementInSecondIsOdd - це буль true
+// Оголошена змінна eachElementInThirdIsEven
+// Значення змінної eachElementInThirdIsEven - це буль false
+// Оголошена змінна eachElementInThirdIsOdd
+// Значення змінної eachElementInThirdIsOdd - це буль false
+// Для перебирання масивів використаний метод every()
+
+const firstArray = [26, 94, 36, 18];
+const secondArray = [17, 61, 23];
+const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// Change code below this line
+
+const eachElementInFirstIsEven = firstArray.every(el => !(el%2));
+const eachElementInFirstIsOdd = firstArray.every(el => (el%2));
+
+const eachElementInSecondIsEven = secondArray.every(el => !(el%2));
+const eachElementInSecondIsOdd = secondArray.every(el => (el%2));
+
+const eachElementInThirdIsEven = thirdArray.every(el => !(el%2));
+const eachElementInThirdIsOdd = thirdArray.every(el => (el%2));
+
+
+// ==============================================  31
+// Доповни функцію isEveryUserActive(users) таким чином, щоб вона перевіряла, чи всі користувачі зараз активні (властивість isActive) і повертала true або false.
+
+// Оголошена змінна isEveryUserActive
+// Змінній isEveryUserActive присвоєна стрілочна функція з параметром (users)
+// Для перебирання параметра users використовується метод every()
+// Виклик функції із зазначеним масивом користувачів повертає false
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// Change code below this line
+const isEveryUserActive = (users) => users.every(({isActive}) => isActive);
+// Change code above this line
+
+
+// =================================================  32
+// Використовуючи метод some(), доповни код таким чином, щоб:
+
+// У змінній anyElementInFirstIsEven був результат перевірки наявності парних елементів в масиві firstArray.
+// У змінній anyElementInFirstIsOdd був результат перевірки наявності непарних елементів в масиві firstArray.
+// У змінній anyElementInSecondIsEven був результат перевірки наявності парних елементів в масиві secondArray.
+// У змінній anyElementInSecondIsOdd був результат перевірки наявності непарних елементів в масиві secondArray.
+// У змінній anyElementInThirdIsEven був результат перевірки наявності парних елементів в масиві thirdArray.
+// У змінній anyElementInThirdIsOdd був результат перевірки наявності непарних елементів в масиві thirdArray.
+// Оголошена змінна firstArray
+// Значення змінної firstArray - це масив [26, 94, 36, 18]
+// Оголошена змінна secondArray
+// Значення змінної secondArray - це масив [17, 61, 23]
+// Оголошена змінна thirdArray
+// Значення змінної thirdArray - це масив [17, 26, 94, 61, 36, 23, 18]
+// Оголошена змінна anyElementInFirstIsEven
+// Значення змінної anyElementInFirstIsEven - це буль true
+// Оголошена змінна anyElementInFirstIsOdd
+// Значення змінної anyElementInFirstIsOdd - це буль false
+// Оголошена змінна anyElementInSecondIsEven
+// Значення змінної anyElementInSecondIsEven - це буль false
+// Оголошена змінна anyElementInSecondIsOdd
+// Значення змінної anyElementInSecondIsOdd - це буль true
+// Оголошена змінна anyElementInThirdIsEven
+// Значення змінної anyElementInThirdIsEven - це буль true
+// Оголошена змінна anyElementInThirdIsOdd
+// Значення змінної anyElementInThirdIsOdd - це буль true
+// Для перебирання масивів використаний метод some()
+
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Change below this line
+
+// const anyElementInFirstIsEven = firstArray.some(el => !(el%2));
+// const anyElementInFirstIsOdd = firstArray.some(el => (el%2));
+
+// const anyElementInSecondIsEven = secondArray.some(el => !(el%2));
+// const anyElementInSecondIsOdd = secondArray.some(el => (el%2));
+
+// const anyElementInThirdIsEven = thirdArray.some(el => !(el%2));
+// const anyElementInThirdIsOdd = thirdArray.some(el => (el%2));
+
+
+// =======================================  33
+// Доповни функцію isAnyUserActive(users) таким чином, щоб вона перевіряла наявність активних користувачів (властивість isActive) і повертала true або false.
+
+// Оголошена функція isAnyUserActive(users)
+// Для перебирання параметра users використовується метод some()
+// Виклик функції із зазначеним масивом користувачів повертає true
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// Change code below this line
+const isAnyUserActive = users => users.some(({isActive}) => isActive);
+// Change code above this line
+
+
+// =======================================  34
+// Ігровому сервісу необхідний функціонал підрахунку середнього часу, проведеного в іграх. Доповни код таким чином, щоб у змінній totalPlayTime вийшло загальний ігровий час з масиву playtimes.
+
+// Оголошена змінна players
+// Значення змінної players - це об'єкт гравців з ігровим часом кожного
+// Оголошена змінна playtimes
+// Значення змінної playtimes - це масив [1270, 468, 710, 244]
+// Оголошена змінна totalPlayTime
+// Значення змінної totalPlayTime - це число 2692
+// Для перебирання масиву playtimes використовується метод reduce()
+// Оголошена змінна averagePlayTime
+// Значення змінної averagePlayTime - це число 673
+
+// const players = {
+//   mango: 1270,
+//   poly: 468,
+//   ajax: 710,
+//   kiwi: 244
+// };
+// const playtimes = Object.values(players); // [1270, 468, 710, 244]
+// // Change code below this line
+
+// const totalPlayTime = playtimes.reduce((total, el) => total + el, 0);
+
+// // Change code above this line
+// const averagePlayTime = totalPlayTime / playtimes.length;
+
+// console.log(playtimes);
+// console.log(totalPlayTime);
+// console.log(averagePlayTime);
+
+
+// ===================================  35
+// Нашому сервісу необхідно розрахувати середній час, проведений в одній грі для кожного гравця, і отримати загальну суму цих значень часу. Розрахувати час для кожного з гравців можна, розділивши його час (властивість playtime) на кількість ігор (властивість gamesPlayed).
+
+// Оголошена змінна players
+// Значення змінної players - це масив об'єктів гравців
+// Оголошена змінна totalAveragePlaytimePerGame
+// Значення змінної totalAveragePlaytimePerGame - це число 1023
+// Для перебирання масиву players використовується метод reduce()
+
+const players = [
+  { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+  { name: "Poly", playtime: 469, gamesPlayed: 2 },
+  { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+  { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+];
+// Change code below this line
+
+const totalAveragePlaytimePerGame = players.reduce((average, {playtime, gamesPlayed}) => average + playtime / gamesPlayed, 0);
+
+console.log(totalAveragePlaytimePerGame);
+
+
+// ========================================  36
+// Доповни функцію calculateTotalBalance(users) таким чином, щоб вона рахувала і повертала суму всіх коштів (властивість balance), які зберігають користувачі з масиву users.
+
+// Оголошена змінна calculateTotalBalance
+// Змінній calculateTotalBalance присвоєна стрілочна функція з параметром (users)
+// Для перебирання параметра users використовується метод reduce()
+// Виклик функції із зазначеним масивом користувачів повертає число 20916
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// Change code below this line
+const calculateTotalBalance = users => users.reduce((sum, {balance}) => sum + balance, 0);
+// Change code above this line
+
+console.log(calculateTotalBalance(testUser));
+
+
+// ==========================================  37
+// Доповни функцію getTotalFriendCount(users) таким чином, щоб вона рахувала і повертала загальну кількість друзів (властивість friends) усіх користувачів з масиву users.
+
+// Оголошена змінна getTotalFriendCount
+// Змінній getTotalFriendCount присвоєна стрілочна функція з параметром (users)
+// Для перебирання параметра users використовується метод reduce()
+// Виклик функції із зазначеним масивом користувачів повертає число 14
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// Change code below this line
+const getTotalFriendCount = users => users.reduce((fr, {friends}) => fr + friends.length, 0);
+// Change code above this line
+
+console.log(getTotalFriendCount(testUser));
+
+
+// =============================================  38
+// Доповни код таким чином, щоб у змінній ascendingReleaseDates вийшла копія масиву releaseDates, відсортована за зростанням, а у змінній alphabeticalAuthors - копія масиву імен авторів authors, відсортована за алфавітом.
+
+// Оголошена змінна releaseDates
+// Значення змінної releaseDates - це масив [2016, 1967, 2008, 1984, 1973, 2012, 1997]
+// Оголошена змінна authors
+// Значення змінної authors - це масив ["Tanith Lee", "Bernard Cornwell", "Robert Sheckley", "Fyodor Dostoevsky"]
+// Оголошена змінна ascendingReleaseDates
+// Значення змінної ascendingReleaseDates - це масив [1967, 1973, 1984, 1997, 2008, 2012, 2016]
+// Оголошена змінна alphabeticalAuthors
+// Значення змінної alphabeticalAuthors - це масив ["Bernard Cornwell", "Tanith Lee", "Robert Sheckley", "Fyodor Dostoevsky"]
+// Використаний метод sort()
+
+const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+const authors = [
+  "Tanith Lee",
+  "Bernard Cornwell",
+  "Robert Sheckley",
+  "Fyodor Dostoevsky",
+];
+// Change code below this line
+
+// const ascendingReleaseDates = [...releaseDates].sort((a, b) => a-b);
+
+// const alphabeticalAuthors = [...authors].sort();
+
+// console.log(ascendingReleaseDates);
+// console.log(alphabeticalAuthors);
+
+
+// =========================================  39
+// Онлайн бібіліотеці необхідно відображати книги, відсортовані за датою видання, за її зростанням або спаданням. Доповни код таким чином, щоб у змінній ascendingReleaseDates вийшла копія масиву releaseDates, відсортована за зростанням, а у змінній descendingReleaseDates - копія, відсортована за спаданням.
+
+// Оголошена змінна releaseDates
+// Значення змінної releaseDates - це масив [2016, 1967, 2008, 1984, 1973, 2012, 1997]
+// Оголошена змінна ascendingReleaseDates
+// Значення змінної ascendingReleaseDates - це масив [1967, 1973, 1984, 1997, 2008, 2012, 2016]
+// Оголошена змінна descendingReleaseDates
+// Значення змінної descendingReleaseDates - це масив [2016, 2012, 2008, 1997, 1984, 1973, 1967]
+// Використаний метод sort()
+
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// Change code below this line
+
+// const ascendingReleaseDates = [...releaseDates].sort((a, b) => a-b);
+
+// const descendingReleaseDates = [...releaseDates].sort((a, b) => b-a);
+
+
+// =============================================  40
+// Онлайн бібіліотеці необхідно відображати книги, відсортовані за автором, в алфавітному і зворотному алфавітному порядку. Доповни код таким чином, щоб у змінній authorsInAlphabetOrder вийшла копія масиву authors, відсортована за алфавітом, а у змінній authorsInReversedOrder - копія, відсортована у зворотному алфавітному порядку.
+
+// Оголошена змінна authors
+// Значення змінної authors - це масив ["Tanith Lee", "Bernard Cornwell", "Robert Sheckley", "Fyodor Dostoevsky", "Howard Lovecraft"]
+// Оголошена змінна authorsInAlphabetOrder
+// Значення змінної authorsInAlphabetOrder - це масив ["Bernard Cornwell", "Fyodor Dostoevsky", "Howard Lovecraft", "Robert Sheckley", "Tanith Lee"]
+// Оголошена змінна authorsInReversedOrder
+// Значення змінної authorsInReversedOrder - це масив ["Tanith Lee", "Robert Sheckley", "Howard Lovecraft", "Fyodor Dostoevsky", "Bernard Cornwell"]
+// Використаний метод sort()
+
+// const authors = [
+//   "Tanith Lee",
+//   "Bernard Cornwell",
+//   "Robert Sheckley",
+//   "Fyodor Dostoevsky",
+//   "Howard Lovecraft",
+// ];
+// Change code below this line
+
+// const authorsInAlphabetOrder = [...authors].sort();
+
+// const authorsInReversedOrder = [...authors].sort((a, b) => b.localeCompare(a));
+
+// console.log(authorsInAlphabetOrder);
+// console.log(authorsInReversedOrder);
+
+
+// =============================================  41
+// Доповни код таким чином, щоб:
+
+// У змінній sortedByAuthorName вийшов масив книг, відсортований за ім'ям автора в алфавітному порядку.
+// У змінній sortedByReversedAuthorName вийшов масив книг, відсортований за ім'ям автора у зворотному алфавітному порядку.
+// У змінній sortedByAscendingRating вийшов масив книг, відсортований за зростанням рейтингу.
+// У змінній sortedByDescentingRating вийшов масив книг, відсортований за спаданням рейтингу.
+// Оголошена змінна books
+// Значення змінної books - це вихідний масив об'єктів книг
+// Оголошена змінна sortedByAuthorName
+// Значення змінної sortedByAuthorName - це масив книг, відсортований за ім'ям автора в алфавітному порядку
+// Оголошена змінна sortedByReversedAuthorName
+// Значення змінної sortedByReversedAuthorName - це масив книг, відсортований за ім'ям автора у зворотному алфавітному порядку
+// Оголошена змінна sortedByAscendingRating
+// Значення змінної sortedByAscendingRating - це масив книг, відсортований за зростанням рейтингу
+// Оголошена змінна sortedByDescentingRating
+// Значення змінної sortedByDescentingRating - це масив книг, відсортований за спаданням рейтингу
+// Для перебирання масиву books використовується метод sort()
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+// Change code below this line
+
+// const sortedByAuthorName = [...books].sort(({ author: a }, { author: b }) => a.localeCompare(b));
+
+// const sortedByReversedAuthorName = [...books].sort(({ author: a }, { author: b }) => b.localeCompare(a));
+
+// const sortedByAscendingRating = [...books].sort(({rating: a}, {rating:b}) => a-b);
+
+// const sortedByDescentingRating = [...books].sort(({rating: a}, {rating:b}) => b-a);
+
+// console.log(sortedByAuthorName);
+// console.log(sortedByReversedAuthorName);
+
+
+// ============================================== 42
+// Доповни функцію sortByAscendingBalance(users) таким чином, щоб вона повертала масив користувачів, відсортований за зростанням їх балансу (властивість balance).
+
+// Оголошена змінна sortByAscendingBalance
+// Змінній sortByAscendingBalance присвоєна стрілочна функція з параметром (users)
+// Значення параметра users не змінюється
+// Виклик функції із зазначеним масивом користувачів повертає новий масив користувачів, відсортований за зростанням їх балансу
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+// Для перебирання параметра users використаний метод sort()
+
+// // Change code below this line
+// const sortByAscendingBalance = users => [...users].sort(({balance: a}, {balance: b}) => a-b);
+// Change code above this line
+
+
+// ===============================================  43
+// Доповни функцію sortByDescendingFriendCount(users) таким чином, щоб вона повертала масив користувачів, відсортований за спаданням кількості їхніх друзів (властивість friends).
+
+// Оголошена змінна sortByDescendingFriendCount
+// Змінній sortByDescendingFriendCount присвоєна стрілочна функція з параметром (users)
+// Значення параметра users не змінюється
+// Для перебирання параметра users використаний метод sort()
+// Виклик функції із зазначеним масивом користувачів повертає новий масив користувачів, відсортований за спаданням кількості їхніх друзів
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// // Change code below this line
+// const sortByDescendingFriendCount = users => [...users].sort(({friends: a}, {friends:b}) => b.length - a.length);
+// // Change code above this line
+
+// console.log(sortByDescendingFriendCount(testUser));
+
+
+// ==================================  44
+// Доповни функцію sortByName(users) таким чином, щоб вона повертала масив користувачів, відсортований за їх ім'ям (властивість name) в алфавітному порядку.
+
+// Оголошена змінна sortByName
+// Змінній sortByName присвоєна стрілочна функція з параметром (users)
+// Значення параметра users не змінюється
+// Для перебирання параметра users використаний метод sort()
+// Виклик функції із зазначеним масивом користувачів повертає новий масив користувачів, відсортований за ім'ям в алфавітному порядку
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// // Change code below this line
+// const sortByName = users => [...users].sort(({name: a}, {name: b}) => a.localeCompare(b));
+// // Change code above this line
+
+// console.log(sortByName(testUser));
+
+
+// ===================================  45
+// Доповни код таким чином, щоб у змінній names вийшов масив імен авторів в алфавітному порядку, рейтинг книг яких більший за значення змінної MIN_BOOK_RATING.
+
+// Оголошена змінна books
+// Значення змінної books - це вихідний масив об'єктів
+// Оголошена змінна MIN_BOOK_RATING
+// Значення змінної MIN_BOOK_RATING - це число 8
+// Оголошена змінна names
+// Значення змінної names - це масив ["Bernard Cornwell", "Howard Lovecraft", "Robert Sheckley"]
+// Відсутні оголошені змінні, крім books, MIN_BOOK_RATING і names
+// Використовується ланцюжок методів filter, map, sort
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   {
+//     title: "The Dreams in the Witch House",
+//     author: "Howard Lovecraft",
+//     rating: 8.67,
+//   },
+// ];
+// const MIN_BOOK_RATING = 8;
+// // Change code below this line
+
+// const names = books.filter(({rating}) => rating>MIN_BOOK_RATING).map(({author}) => author).sort();
+// console.log(names);
+
+
+// =====================================  46
+// Доповни функцію getNamesSortedByFriendCount(users) таким чином, щоб вона повертала масив імен користувачів, відсортований за зростанням кількості їхніх друзів (властивість friends).
+
+// Оголошена змінна getNamesSortedByFriendCount
+// Змінній getNamesSortedByFriendCount присвоєна стрілочна функція з параметром (users)
+// У тілі функції використовується ланцюжок методів
+// Значення параметра users не змінюється
+// Виклик функції із зазначеним масивом користувачів повертає масив ["Moore Hensley", "Sharlene Bush", "Elma Head", "Sheree Anthony", "Ross Vazquez", "Carey Barr", "Blackburn Dotson"]
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// // Change code below this line
+// const getNamesSortedByFriendCount = users => [...users].sort(({friends: a}, {friends:b}) => a.length - b.length).map(({name}) => name);
+// // Change code above this line
+// console.log(getNamesSortedByFriendCount(testUser));
+
+
+// =====================================  47
+// Доповни функцію getSortedFriends(users) таким чином, щоб вона повертала масив унікальних імен друзів (властивість friends), відсортований за алфавітом.
+
+// Оголошена змінна getSortedFriends
+// Змінній getSortedFriends присвоєна стрілочна функція з параметром (users)
+// У тілі функції використовується ланцюжок методів в правильному порядку
+// Значення параметра users не змінюється
+// Виклик функції із зазначеним масивом користувачів повертає масив ["Adrian Cross", "Aisha Tran", "Briana Decker", "Eddie Strong", "Goldie Gentry", "Jacklyn Lucas", "Jordan Sampson", "Linda Chapman", "Marilyn Mcintosh", "Naomi Buckner", "Padilla Garrison", "Sharron Pace", "Solomon Fokes"]
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// // Change code below this line
+// const getSortedFriends = users => [...users].flatMap(({friends}) => friends).filter((el, i, arr) => arr.indexOf(el) === i).sort();
+
+// console.log(getSortedFriends(testUser));
+
+
+// ========================================  48 ==
+// Доповни функцію getTotalBalanceByGender(users, gender) таким чином, щоб вона повертала загальний баланс користувачів (властивість balance), стать яких (властивість gender) збігається зі значенням параметра gender.
+
+// Оголошена змінна getTotalBalanceByGender
+// Змінній getTotalBalanceByGender присвоєна стрілочна функція з параметрами (users, gender)
+// У тілі функції використовується ланцюжок методів в правильному порядку
+// Значення параметра users не змінюється
+// Якщо значення параметра gender - це рядок "male", функція повертає число 12053
+// Якщо значення параметра gender - це рядок "female", функція повертає число 8863
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// Change code below this line
+const getTotalBalanceByGender = (users, gender) => users.filter(({gender: g}) => g === gender).reduce((bal, {balance}) => bal + balance, 0);
+
+console.log(getTotalBalanceByGender(testUser, "female"));
